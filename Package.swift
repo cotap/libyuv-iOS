@@ -9,16 +9,12 @@ let package = Package(
     products: [
         .library(
             name: "libyuv-iOS",
-            targets: ["clibyuv-iOS"]),
+            targets: ["libyuv-iOS"]),
     ],
     dependencies: [],
     targets: [
-        .target(name: "clibyuv-iOS",
+        .target(name: "libyuv-iOS",
                 dependencies: [],
-                path: "Sources/clibyuv-iOS"),
-        .target(
-            name: "libyuv-iOS",
-            dependencies: [.target(name: "clibyuv-iOS")],
-            path: "Sources/libyuv-iOS"),
+                path: "Sources/libyuv-iOS"),
     ]
 )
