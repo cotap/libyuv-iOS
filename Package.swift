@@ -13,10 +13,12 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
+        .target(name: "clibyuv-iOS",
+                dependencies: [],
+                path: "Sources/clibyuv-iOS"),
         .target(
             name: "libyuv-iOS",
-            dependencies: [],
-            path: "libyuv",
-            cxxSettings: [.headerSearchPath("../")]),
+            dependencies: [.target(name: "clibyuv-iOS")],
+            path: "Sources/libyuv-iOS"),
     ]
 )
